@@ -1,8 +1,8 @@
 {
-  "name": "vuex-counter",
+  "name": "vuejs-todo-app",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "Nachimuthu Vellingiri <nacvelli@publicisgroupe.net>",
+  "description": "A Vue.js Simple Todo project",
+  "author": "Nachimuthu Vellingiri <vnmuthu@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
