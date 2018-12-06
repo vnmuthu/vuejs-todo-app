@@ -5,12 +5,13 @@
     </div>
     <div class="row">
       <form @submit.prevent="submitTodo" class="">
-        <input class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?" v-model="newTodo" @keyup.enter="submitTodo" @keydown="noAlertMsg" size="60" height="30" />
+        <input class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?" v-model="newTodo" @keydown="noAlertMsg" size="60" height="30" />
         <button class="btn btn-success">+</button>
         <div class="alert" role="alert">{{ this.noTodoMsg }}</div>
       </form>
     </div>
     <div class="row">
+      <h4>Todo List</h4>
       <ul class="collection">
         <li class="collection-item" v-for="todo in todos" :key="todo.id">
           <div class="todoCheckBox"><input type="checkbox" :checked=todo.done @change="todo.done = !todo.done" /></div>
@@ -23,7 +24,7 @@
         </li>
       </ul>
       <div class="todoSummary">
-        <p class="text-left text-info">Total - {{ todos.length }}</p>
+        <p class="text-left text-danger">Total - {{ todos.length }}</p>
         <p class="text-right text-success">Done - {{ completedTodos }}</p>
       </div>
     </div>
@@ -35,7 +36,7 @@ export default {
   name: 'Todos',
   data() {
       return {
-        todoTitle: 'My To-Do',
+        todoTitle: 'My Todo',
         todos: [],
         newTodo: '',
         noTodoMsg: ''
@@ -106,7 +107,7 @@ input {
   color: red;
 }
 .collection {
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 0;
 }
 .collection-item {
