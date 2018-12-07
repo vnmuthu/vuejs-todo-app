@@ -119,24 +119,21 @@ input {
   background: #ededed;
   border-bottom: 1px solid #fff;
 }
+.todoSummary {
+  display: inline-block;
+  font-weight: bold;
+}
 .todoCheckBox, .todoContent, .todoDelete {
   float: left;
-}
-.todoCheckBox {
-  width: 10%;
 }
 .todoContent {
   width: 80%;
   text-align: left;
 }
-.todoDelete {
+.todoCheckBox, .todoDelete {
   width: 10%;
 }
 .delete-todo {
   cursor: pointer;
-}
-.todoSummary {
-  display: inline-block;
-  font-weight: bold;
 }
 </style>
